@@ -20,6 +20,13 @@ const config = {
     filename: 'bundle.js'
   },
 
+  resolve: {
+    alias: {
+      semantic: path.resolve(__dirname, 'node_modules/semantic-ui-react/src/'),
+      icons: path.resolve(__dirname, 'node_modules/semantic-ui-css/themes/default/assets/fonts')
+    }
+  },
+
   context: path.join(__dirname, 'src'),
 
   module : {
@@ -40,6 +47,17 @@ const config = {
       {
         test: /\.css$/,
         loaders: ['style-loader', 'css-loader?-url', 'postcss-loader']
+      },
+      {
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        loader: 'file-loader'
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader',
+        options: {
+          useRelativePath: true
+        }
       }
     ]
   },

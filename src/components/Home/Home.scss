@@ -1,0 +1,27 @@
+.ResultViewer {
+  padding: 1em;
+  border: 2px solid orange;
+
+  .main {
+    .screen-icon {
+      .result-item {
+
+        .result-screen {
+          img {
+            border: 3px solid lime;
+          }
+        } // end .result-image
+
+        .result-icon {
+          // border: 3px solid orange;
+          img {
+            border: 3px solid lightgreen;
+            margin: 0 auto;
+            height: 100px;
+            width: 100px;
+          }
+        }
+      } // end .result
+    } // end .screen-icon
+  }
+}
