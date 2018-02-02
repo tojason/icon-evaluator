@@ -112,6 +112,7 @@ class Home extends Component {
 
   render() {
     const { activeItem, section_list, current_page, display_list } = this.state;
+
     const screen_img = '/assets/sample-screen.jpg';
     const icon_img = '/assets/sample-icon.png';
     const sample_list = [
@@ -120,11 +121,7 @@ class Home extends Component {
     ];
 
     const last_page = (current_page + 1) === Math.ceil(sample_data[activeItem].length / 10) ;
-    // const section_list = [
-    //   { name: 'more_vertical', count: 206 },
-    //   { name: 'filter_list', count: 206 },
-    //   { name: 'pause', count: 40}
-    // ];
+
     return (
       <Container className='ResultViewer'>
         <Segment raised>
@@ -140,7 +137,6 @@ class Home extends Component {
           columns='equal'
           >
           <Grid.Column>
-            Left Section List
             <Menu vertical>
               {
                 section_list.map((section, index) => {
@@ -193,7 +189,6 @@ class Home extends Component {
             className='screen-icon'
             width={12}
             >
-            Right Viewer
             {
               display_list.map((item, index) => {
                 return (
