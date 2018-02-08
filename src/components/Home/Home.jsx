@@ -113,10 +113,13 @@ class Home extends Component {
   render() {
     const { activeItem, section_list, current_page, display_list } = this.state;
 
+    const icom_img_abs_path = '/Users/jasonsitu/Desktop/sample-icon.png';
+    const icom_img_path = '/assets/img/sample-icon.png';
+    const screen_img_path = '/assets/img/sample-screen.jpg';
     const screen_img = '/assets/sample-screen.jpg';
     const icon_img = '/assets/sample-icon.png';
     const sample_list = [
-      {icon_path: icon_img, screenshot: screen_img, label: 'label-A'},
+      {icon_path: icom_img_path, screenshot: screen_img_path, label: 'label-A'},
       {icon_path: icon_img, screenshot: screen_img, label: 'label-B'}
     ];
 
@@ -190,7 +193,7 @@ class Home extends Component {
             width={12}
             >
             {
-              display_list.map((item, index) => {
+              sample_list.map((item, index) => {
                 return (
                   <Segment key={ index } className='result-item'>
                     <Grid>
