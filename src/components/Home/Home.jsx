@@ -11,6 +11,7 @@ import {
   Button,
 } from 'semantic-ui-react';
 import sample_data from './../../assets/icons_with_labels.json';
+import $ from 'jquery';
 
 import styles from './Home.scss';
 
@@ -90,6 +91,7 @@ class Home extends Component {
       display_list: list,
       current_page: 0,
     });
+	$('html, body').animate({ scrollTop: 0 }, 'fast');
   }
 
   handleLoadMoreResult(event) {
@@ -108,6 +110,7 @@ class Home extends Component {
       current_page: current_page + 1,
       display_list: list,
     });
+	$('html, body').animate({ scrollTop: 0 }, 'fast');
   }
 
   render() {
