@@ -196,7 +196,7 @@ class Home extends Component {
             width={12}
             >
             {
-              sample_list.map((item, index) => {
+              display_list.map((item, index) => {
                 return (
                   <Segment key={ index } className='result-item'>
                     <Grid>
