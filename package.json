@@ -1,7 +1,7 @@
 {
-  "name": "webpack-react-setup",
+  "name": "icon-evaluator",
   "version": "1.0.0",
-  "description": "template for ReactJS",
+  "description": "Use to verify that icon is correctly classify by the CNN model",
   "main": "index.js",
   "scripts": {
     "watch": "webpack -d --watch",
